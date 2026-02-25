@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>synnine's comment remover tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="win">
+
+    <div class="titlebar">
+        <div class="titlebar-icon">
+            <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="2" width="12" height="10" rx="1" fill="#a0c8ff" stroke="#5090e0" stroke-width="0.5"/>
+                <line x1="3" y1="5" x2="9" y2="5" stroke="#4060c0" stroke-width="1"/>
+                <line x1="3" y1="7" x2="7" y2="7" stroke="#4060c0" stroke-width="1"/>
+                <line x1="3" y1="9" x2="8" y2="9" stroke="#4060c0" stroke-width="1"/>
+                <circle cx="11" cy="5" r="1.5" fill="#ff8040"/>
+            </svg>
+        </div>
+        <div class="titlebar-title">synnine's comment remover tool</div>
+        <div class="titlebar-btns">
+            <button class="tbtn tbtn-min" title="minimize"></button>
+            <button class="tbtn tbtn-max" title="maximize"></button>
+            <button class="tbtn tbtn-close" title="close"></button>
+        </div>
+    </div>
+
+    <div class="body">
+
+        <div class="menubar">
+            <span class="menu">file</span>
+            <span class="menu">edit</span>
+            <span class="menu">view</span>
+            <span class="menu">help</span>
+        </div>
+
+        <div class="content">
+
+            <div class="panel">
+                <div class="panel-head">input</div>
+                <textarea id="input" spellcheck="false" placeholder="paste your code here..."></textarea>
+            </div>
+
+            <div class="toolbar">
+                <div class="field">
+                    <label for="lang">language:</label>
+                    <select id="lang">
+                        <option value="auto">auto-detect</option>
+                        <option value="cpp">c++</option>
+                        <option value="csharp">c#</option>
+                        <option value="web">javascript / css</option>
+                        <option value="html">html</option>
+                    </select>
+                </div>
+
+                <div class="sep"></div>
+
+                <label class="chk-label">
+                    <input type="checkbox" id="lines" checked>
+                    preserve line structure
+                </label>
+
+                <div class="sep"></div>
+
+                <button class="btn btn-primary" id="process">process</button>
+                <button class="btn" id="clear">clear</button>
+            </div>
+
+            <div class="panel">
+                <div class="panel-head">output</div>
+                <textarea id="output" spellcheck="false" readonly></textarea>
+            </div>
+
+        </div>
+
+        <div class="statusbar">
+            <div class="sf sf-status" id="status">ready</div>
+            <div class="sf sf-stats" id="stats"></div>
+        </div>
+
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

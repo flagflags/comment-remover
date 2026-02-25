@@ -1,4 +1,4 @@
-# synnine's comment remover tool <:
+# synnie's comment remover tool <:
 
 you know the drill. you ask ai for some code, it comes back looking like this:
 
